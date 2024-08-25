@@ -1,0 +1,24 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Add Product</title>
+</head>
+<body>
+   @using (Html.BeginForm("Add","Admin")){
+        <label>whats the product name</label>
+        <input type="text" name="name" value="" />
+        <label>whats the product Manufacturer</label>
+        <input type="text" name="manufacturer" value="" />
+        <label>whats the product Price</label>
+        <input type="text" name="price" value="" />
+        <input type="submit" name="submit" value="submit"/>
+    }
+</body>
+</html>
