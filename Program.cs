@@ -6,8 +6,8 @@ internal class Program
     private static void Main(string[] args)
     {
         var builder = WebApplication.CreateBuilder(args);
-        builder.Services.AddDbContext<itehaProjectContext>(options =>
-            options.UseSqlServer(builder.Configuration.GetConnectionString("dbConn") ?? throw new InvalidOperationException("Connection string 'itehaProjectContext' not found.")));
+        builder.Services.AddDbContext<dbConn>(options =>
+            options.UseSqlServer(builder.Configuration.GetConnectionString("dbConn") ?? throw new InvalidOperationException("Connection string 'dbConn' not found.")));
 
         // Add services to the container.
         builder.Services.AddControllersWithViews();
