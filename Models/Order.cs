@@ -2,9 +2,9 @@
 {
     public class Order
     {
-        private string orderID;
-        private DateOnly dateConfirmed;
-        private string status;
+        private string orderID { get; set; }
+        private DateOnly dateConfirmed { get; set; }
+        private string status { get; set; }
 
         public Order(string orderID, DateOnly dateConfirmed, string status)
         {
