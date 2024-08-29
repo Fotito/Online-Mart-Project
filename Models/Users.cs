@@ -2,9 +2,9 @@
 {
     public class Users
     {
-        private string userID;
-        private string username;
-        private string password;
+        private string userID {get; set;}
+        private string username{get; set;}
+        private string password{get; set;}
         public Users(string userID, string username, string password) { 
         this.userID = userID;
             this.username = username;
