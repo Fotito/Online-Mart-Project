@@ -7,8 +7,8 @@ namespace itehaProject.Models
         [Key]
         public string ProductID { get; set; }
         public string ProductName { get; set; }
-        public string Manufacturerr { get; set; }
-        public double price { get; set; }
+        public string Manufacturer { get; set; }
+        public double Price { get; set; }
 
         
 
