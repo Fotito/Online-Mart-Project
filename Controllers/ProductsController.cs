@@ -21,7 +21,6 @@ List<Products> Products = new List<Products>();
 Products.Add(product);
 }
 return View(Products);
-            return View(value);
         }
         
     
