@@ -33,17 +33,10 @@ CREATE TABLE [dbo].[orderItems] (
     [orderID]   VARCHAR (255) NOT NULL,
     [productID] VARCHAR (255) NOT NULL,
     [quantity]  INT           NOT NULL,
-    CONSTRAINT [orderkey] UNIQUE NONCLUSTERED ([orderID] ASC),
-    CONSTRAINT [productkey] UNIQUE NONCLUSTERED ([productID] ASC),
+    CONSTRAINT [PK_orderItems] PRIMARY KEY CLUSTERED ([orderID] ASC, [productID] ASC),
     CONSTRAINT [FK_orderItems_Order] FOREIGN KEY ([orderID]) REFERENCES [dbo].[Order] ([OrderID]),
     CONSTRAINT [FK_orderItems_Products] FOREIGN KEY ([productID]) REFERENCES [dbo].[Products] ([ProductID])
 );
-
-
-
-
-
-
 
 INSERT INTO [dbo].[Products] ([ProductID], [productName], [Manufacturer], [Price]) VALUES (1, 'silicon','Peeles Minerals', 43.00);
 INSERT INTO [dbo].[Products] ([ProductID], [productName], [Manufacturer], [Price]) VALUES (2, 'nails','Nellas Nails', 62.99);
