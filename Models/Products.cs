@@ -12,7 +12,12 @@ namespace itehaProject.Models
 
         
 
-        public Products() { }
+         public Products(string productid, string name, string manufacturer, double price) {
+ this.ProductID = productid;
+     this.ProductName = name;
+     this.price= price;
+     this.Manufacturerr= manufacturer;
+ }
         
     }
 }
