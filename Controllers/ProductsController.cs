@@ -10,15 +10,17 @@ namespace itehaProject.Controllers
     public class ProductController : Controller
     {
         dbConn _context;
-
+List<Products> Products = new List<Products>();
         public ProductController(dbConn context)
         {
             _context = context;
         }
         public async Task<IActionResult> Index()
         {
-            var value = await _context.prods.ToListAsync();
-
+            foreach (var product in _context.prods) { 
+Products.Add(product);
+}
+return View(Products);
             return View(value);
         }
         
