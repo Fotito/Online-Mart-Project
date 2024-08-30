@@ -9,8 +9,9 @@
     <title>Checkout</title>
 </head>
 <body>
-    are you finalizing your order
-    <a asp-action="Index" asp-controller="Product">yes </a>
-    <a asp-action="Index">no</a>
+   total is @ViewData["count"];
+are you finalizing your order
+<a asp-action="Index" asp-controller="Product">yes </a>
+<a asp-action="Index" asp-controller="Product">no</a>
 </body>
 </html>
